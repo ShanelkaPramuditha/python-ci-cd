@@ -4,7 +4,7 @@ import os
 
 env = os.getenv("MODE", "development")
 if env == "production":
-    load_dotenv(".env.prod")
+    load_dotenv(".env")
 else:
     load_dotenv(".env.dev")
 
