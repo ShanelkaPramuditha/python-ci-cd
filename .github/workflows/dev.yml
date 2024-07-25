@@ -28,7 +28,7 @@ jobs:
            id: meta
            uses: docker/metadata-action@v3
            with:
-              images: ghcr.io/${{ github.repository }}:dev
+              images: ghcr.io/${{ github.repository }}
               flavor: |
                  latest=false
 
