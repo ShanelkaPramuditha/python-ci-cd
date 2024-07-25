@@ -7,7 +7,7 @@ on:
 
 env:
    REGISTRY: ghcr.io
-   DOCKERFILE_PATH: ${{ github.ref == 'refs/heads/main' && './docker/dev/Dockerfile' || './docker/prod/Dockerfile' }}
+   DOCKERFILE_PATH: ${{ github.ref == 'refs/heads/main' && './docker/prod/Dockerfile' || './docker/dev/Dockerfile' }}
 
 jobs:
    push-to-registry:
