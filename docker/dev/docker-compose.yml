@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+   web:
+      image: ghcr.io/shanelkapramuditha/python-ci-cd:dev
+      container_name: python-ci-cd
+      restart: unless-stopped
+
+      ports:
+         - '5000:5000'
+
+volumes:
+   web:
+      name: 'python-ci-cd'
