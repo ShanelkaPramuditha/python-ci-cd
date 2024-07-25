@@ -9,7 +9,7 @@ env:
    REGISTRY: ghcr.io
 
 jobs:
-   docker:
+   push-to-registry:
       runs-on: ubuntu-latest
       permissions:
          contents: read
@@ -39,4 +39,5 @@ jobs:
               file: ./docker/dev/Dockerfile
               push: true
               tags: ${{ steps.meta.outputs.tags }}
+              labels: ${{ steps.meta.outputs.labels }}
               platforms: linux/amd64,linux/arm64
