@@ -28,7 +28,7 @@ jobs:
          - name: Convert Username and Repository Name to lowercase
            run: |
               echo "export REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
-              echo "export USERNAME=$(echo ${{ github.actor }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+              echo "USERNAME=${${{ github.actor}},,}" >> $GITHUB_ENV
 
          - name: Build and push
            uses: docker/build-push-action@v2
