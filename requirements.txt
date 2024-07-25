@@ -13,6 +13,7 @@ pyaes==1.6.1
 Pygments==2.17.2
 Pyrogram==2.0.106
 PySocks==1.7.1
+python-dotenv==1.0.1
 pytz==2024.1
 rclone==0.4.4
 rclone-python==0.1.12
