@@ -1,8 +1,8 @@
 version: '3.3'
 
 services:
-   web:
-      image: ghcr.io/shanelkapramuditha/python-ci-cd:latest
+   prod:
+      image: ghcr.io/shanelkapramuditha/python-ci-cd:main
       container_name: python-ci-cd
       restart: unless-stopped
 

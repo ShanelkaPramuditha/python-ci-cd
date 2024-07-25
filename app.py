@@ -8,6 +8,7 @@ app = Flask(__name__)
 load_dotenv()
 app.config["ENVIRONMENT"] = os.getenv("ENVIRONMENT")
 app.config["PORT"] = os.getenv("PORT")
+print(app.config["ENVIRONMENT"])
 
 
 @app.route("/")
