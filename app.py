@@ -12,6 +12,7 @@ else:
 app = Flask(__name__)
 
 app.config["ENVIRONMENT"] = os.getenv("ENVIRONMENT")
+app.config["PORT"] = os.getenv("PORT")
 
 
 @app.route("/")
@@ -21,4 +22,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=app.config["PORT"])
