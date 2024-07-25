@@ -10,4 +10,6 @@ COPY . .
 
 EXPOSE 5000
 
+ENV MODE=development
+
 CMD ["python", "app.py"]

@@ -3,7 +3,7 @@ version: '3.3'
 services:
    web:
       image: ghcr.io/shanelkapramuditha/python-ci-cd:dev
-      container_name: python-ci-cd
+      container_name: python-ci-cd-dev
       restart: unless-stopped
 
       ports:
@@ -11,4 +11,4 @@ services:
 
 volumes:
    web:
-      name: 'python-ci-cd'
+      name: 'python-ci-cd-dev'
