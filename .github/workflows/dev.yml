@@ -26,11 +26,7 @@ jobs:
 
          - name: Convert Username and Repository Name to lowercase
            run: |
-              echo "export REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
-              echo "USERNAME=${${{ github.actor}},,}" >> $GITHUB_ENV
-              # Print the values
-              echo $REPOSITORY
-              echo $USERNAME
+              echo "GITHUB_USERNAME=${${{ github.actor }},,}" >>${GITHUB_ENV}
 
          - name: Build and push
            uses: docker/build-push-action@v2
@@ -38,5 +34,5 @@ jobs:
               context: .
               file: ./docker/dev/Dockerfile
               push: true
-              tags: ghcr.io${{ env.USERNAME }}/${{ github.repository }}:dev
+              tags: ghcr.io${{ env.GITHUB_USERNAME }}/${{ github.repository }}:dev
               platforms: linux/amd64,linux/arm64
