@@ -29,6 +29,9 @@ jobs:
            run: |
               echo "export REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
               echo "USERNAME=${${{ github.actor}},,}" >> $GITHUB_ENV
+              # Print the values
+              echo $REPOSITORY
+              echo $USERNAME
 
          - name: Build and push
            uses: docker/build-push-action@v2
