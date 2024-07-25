@@ -2,15 +2,10 @@ from flask import Flask, render_template
 from dotenv import load_dotenv
 import os
 
-env = os.getenv("MODE", "development")
-if env == "production":
-    load_dotenv(".env")
-else:
-    load_dotenv(".env.dev")
-
 
 app = Flask(__name__)
 
+load_dotenv()
 app.config["ENVIRONMENT"] = os.getenv("ENVIRONMENT")
 app.config["PORT"] = os.getenv("PORT")
 

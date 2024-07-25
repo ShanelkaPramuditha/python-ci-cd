@@ -10,6 +10,4 @@ COPY . .
 
 EXPOSE 5001
 
-ENV MODE=production
-
 CMD ["python", "app.py"]
