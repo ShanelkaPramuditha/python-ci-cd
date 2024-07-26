@@ -8,6 +8,8 @@ services:
 
       ports:
          - '5001:5001'
+      env_file:
+         - stack.env
 
 volumes:
    web:
