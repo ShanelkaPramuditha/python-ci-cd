@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 load_dotenv()
 app.config["ENVIRONMENT"] = os.getenv("ENVIRONMENT")
-app.config["PORT"] = os.getenv("PORT")
+app.config["PORT"] = os.getenv("SERVER_PORT")
 print(app.config["ENVIRONMENT"])
 
 
@@ -18,4 +18,5 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=app.config["PORT"])
+    port = app.config["PORT"]
+    app.run(host="0.0.0.0", port=port)
